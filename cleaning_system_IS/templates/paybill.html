@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clean@ Bills</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body class="body2">
+    <nav>
+      <ul>
+        <li><a href="{% url 'index' %}">Logout</a></li>
+        <li><a href="{% url 'welcome' %}">Welcome</a></li>
+        <li><a href="{% url 'aboutUs' %}">About Us</a></li>
+        <li><a href="{% url 'paybill' %}">Pay Your Service Bill</a></li>
+        <li><a href="{% url 'view_bills' %}">Inputted Details</a></li>
+      </ul>
+    </nav>
+    <h2>
+      Make your Payment here 👇👇👇 :<br /><br />
+      Options
+    </h2>
+    <form action="{% url 'paybill' %}" method="POST">
+      {% csrf_token %}
+      <input
+        type="radio"
+        id="mobile_money"
+        name="payment_option"
+        value="mobile_money"
+      />
+      <label for="mobile_money">Mobile Money (MTN or Airtel)</label><br />
+      <input type="radio" id="cash" name="payment_option" value="cash" />
+      <label for="cash">Cash on Worked Service</label><br />
+      <input type="submit" value="Submit Payment" />
+    </form>
+  </body>
+</html>

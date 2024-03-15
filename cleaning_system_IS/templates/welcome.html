@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clean@ Welcome</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body class="body5">
+    <nav>
+      <ul>
+        <li><a href="{% url 'index' %}">Logout</a></li>
+        <li><a href="{% url 'welcome' %}">Welcome</a></li>
+        <li><a href="{% url 'aboutUs' %}">About Us</a></li>
+        <li><a href="{% url 'paybill' %}">Pay Your Service Bill</a></li>
+        <li><a href="{% url 'view_bills' %}">Inputted Details</a></li>
+      </ul>
+    </nav>
+      <h1>Welcome to ROYAL CLEANING SERVICES</h1>
+<br>
+      <p>
+        <h2 style="color: purple;">These are the services offered.</h2><br><br>
+        <h2 style="color: purple;">-Basic House Cleaning : A service that involves general house cleaning jobs. ...</h2><br>
+        <h2 style="color: purple;">-Deep Cleaning</h2><br>
+        <h2 style="color: purple;">-Spring Cleaning: This is a more comprehensive clean than a basic clean. ...</h2><br>
+        <h2 style="color: purple;">-Laundry Services: Wash, dry, and fold clothes while cleaning the homeowner's house.</h2><br><br>
+        <h2 style="color: purple;">Each @</h2><br><br>
+        <h2 style="color: purple;">-300,000ugx</h2><br>
+        <h2 style="color: purple;">-650,000ugx</h2><br>
+        <h2 style="color: purple;">-650,000ugx</h2><br>
+        <h2 style="color: purple;">-1,000ugx per cloth<br><br>
+          <p style="color: red;">
+            Customer Management:<br> Allows the company manage its customer accounts.
+            The company can add new customers, <br>update their contact information and
+            view their service history. <br>The customer management functionality also
+            allows the company to create customer profiles, <br>which contain the
+            customer’s contact information, <br>service preferences and billing details.<br><br>
+            Service Management:<br> The system allows the cleaning company to manage its
+            cleaning services.<br> The company can create service packages, set prices,
+            and update availability. <br>The system also allows the company to manage
+            service orders, which include details such as the type of service
+            required,<br> the date and time of the service and the location of the
+            service.
+          </p><br><br></h2>
+      </p><br><br>
+  
+      <h1> PLACE YOUR ORDERS HERE</h1>
+  
+      <form action="{% url 'place_order' %}">
+        <button type="submit">Go to Place Your Order</button>
+      </form>      
+    </body>
+  </html>

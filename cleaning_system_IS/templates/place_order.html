@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Place Your Order</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body class="body7">
+    <nav>
+      <ul>
+        <li><a href="{% url 'index' %}">Logout</a></li>
+        <li><a href="{% url 'welcome' %}">Welcome</a></li>
+        <li><a href="{% url 'aboutUs' %}">About Us</a></li>
+        <li><a href="{% url 'billing_details' %}">Billing Details</a></li>
+        <li><a href="{% url 'paybill' %}">Pay Your Service Bill</a></li>
+        <li><a href="{% url 'view_bills' %}">Inputted Details</a></li>
+      </ul>
+    </nav>
+    <h1>Place Your Order</h1>
+    <form method="POST" action="{% url 'place_order' %}">
+      {% csrf_token %}
+      <label for="service1">Service 1 (required):</label>
+      <input type="text" id="service1" name="service1" required><br><br>
+      <label for="service2">Service 2 (optional):</label>
+      <input type="text" id="service2" name="service2"><br><br>
+      <label for="service3">Service 3 (optional):</label>
+      <input type="text" id="service3" name="service3"><br><br>
+      <label for="CustomerName">Customer Name (required):</label>
+      <input type="text" id="CustomerName" name="CustomerName" required><br><br>
+      <button type="submit">Save</button>
+    </form>
+  </body>
+</html>

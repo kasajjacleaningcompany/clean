@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clean@ About Us</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body class="body6">
+    <nav>
+      <ul>
+        <li><a href="{% url 'index' %}">Logout</a></li>
+        <li><a href="{% url 'welcome' %}">Welcome</a></li>
+        <li><a href="{% url 'aboutUs' %}">About Us</a></li>
+        <li><a href="{% url 'paybill' %}">Pay Your Service Bill</a></li>
+        <li><a href="{% url 'view_bills' %}">Inputted Details</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      <h1>About Us</h1>
+      <p>
+        Welcome to clean@, your reliable cleaning service provider. We are
+        dedicated to delivering exceptional cleaning solutions for both
+        residential and commercial spaces. With our team of experienced
+        professionals and state-of-the-art cleaning equipment, we ensure that
+        your space is spotless and refreshed.
+      </p>
+      <p>
+        At clean@, we understand the importance of a clean and healthy
+        environment. Our mission is to provide top-quality cleaning services
+        that exceed your expectations. Whether you need basic house cleaning,
+        deep cleaning, spring cleaning, or laundry services, we've got you
+        covered.
+      </p>
+      <p>
+        Customer satisfaction is our utmost priority. We strive to build
+        long-term relationships with our clients by providing reliable,
+        efficient, and affordable cleaning solutions. Our dedicated team is
+        committed to delivering outstanding results, leaving your space
+        sparkling clean.
+      </p>
+      <p>
+        Experience the difference with clean@. Contact us today ON
+        <em class="EM"> 0700953178 </em> to schedule your cleaning service and
+        enjoy a clean and fresh living or working environment.
+      </p>
+    </div>
+  </body>
+</html>

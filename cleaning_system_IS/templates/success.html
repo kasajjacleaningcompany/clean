@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Success</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body class="body5">
+    <h1>Success!</h1>
+    <p>
+     Thx for choosing us, Your ORDERS have been successfully saved. <br>You will receive a
+      confirmation msg shortly
+    </p>
+    <form action="none"><a href="{% url 'welcome' %}">Go Back</a></form>
+  </body>
+</html>
